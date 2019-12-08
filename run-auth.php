@@ -1,40 +1,21 @@
 <?php
-$mineloc = file("../accounts/minecraft.txt");
-$mineacc = $mineloc[array_rand($mineloc)];
-$minestk = count($mineloc);
+$opt1loc = file("../accounts/opt1.txt");
+$opt1acc = $mineloc[array_rand($opt1loc)];
+$opt1stk = count($opt1loc);
+$opt2loc = file("accounts/opt2.txt");
+$otp2acc = $hululoc[array_rand($opt2loc)];
+$opt2stk = count($opt2loc);
 
-$hululoc = file("../accounts/hulu.txt");
-$huluacc = $hululoc[array_rand($hululoc)];
-$hulustk = count($hululoc);
-
-
-$uplystk = count($uplyloc);
+	
 if ($_POST["key"] == "key1" OR
 	$_POST["key"] == "key2" OR
 	$_POST["key"] == "key3" ) {
-if (isset($_POST["minecraft"])) {
-	$account = $mineacc;
-	$type = "minecraft";
+if (isset($_POST["option1"])) {
+	$opt1 = $opt1acc;
+}
+if (isset($_POST["option2"])) {
+	$opt2 = $opt2acc;
+}
 }
 
-if (isset($_POST["hulu"])) {
-	$account = $huluacc;
-	$type = "hulu";
-}
-
-if (isset($_POST["spotify"])) {
-	$account = $spotacc;
-	$type = "spotify";
-}
-if (isset($_POST["fortnite"])) {
-	$account = $fortacc;
-	$type = "fortnite";
-}if (isset($_POST["uplay"])) {
-	$account = $uplyacc;
-	$type = "uplay";
-}
-	
-$break1 = "<hr><br><div class='account'>";
-$break2 = "<br><hr></div>";
-}
 ?>
